@@ -2,9 +2,14 @@
   "name": "button-server",
   "version": "1.0.0",
   "description": "Node server for making calls to people via the button",
-  "main": "src",
+  "main": "src/index.js",
   "scripts": {
-    "test": "jest"
+    "start": "nodemon src/index.js --exec babel-node",
+    "build": "babel lib -d dist",
+    "serve": "node dist/index.js",
+    "test": "jest",
+    "lint": "./node_modules/.bin/eslint src",
+    "coverage": "npm test -- --coverage"
   },
   "repository": {
     "type": "git",
@@ -18,5 +23,28 @@
   "bugs": {
     "url": "https://github.com/Cyberkruz/button-server/issues"
   },
-  "homepage": "https://github.com/Cyberkruz/button-server#readme"
+  "homepage": "https://github.com/Cyberkruz/button-server#readme",
+  "devDependencies": {
+    "babel-cli": "^6.22.2",
+    "babel-preset-es2015": "^6.22.0",
+    "babel-preset-stage-2": "^6.22.0",
+    "babel-register": "^6.22.0",
+    "eslint": "^3.14.0",
+    "eslint-config-airbnb": "^14.0.0",
+    "eslint-plugin-import": "^2.2.0",
+    "eslint-plugin-jsx-a11y": "^3.0.2",
+    "eslint-plugin-react": "^6.9.0",
+    "jest": "^18.1.0",
+    "nodemon": "^1.11.0",
+    "supertest": "^2.0.1"
+  },
+  "dependencies": {
+    "body-parser": "^1.16.0",
+    "cors": "^2.8.1",
+    "compression": "^1.6.2",
+    "express": "^4.14.0",
+    "lodash": "^4.17.4",
+    "morgan": "^1.7.0",
+    "twilio": "^2.11.1"
+  }
 }
