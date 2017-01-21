@@ -1,0 +1,22 @@
+{
+  "name": "button-server",
+  "version": "1.0.0",
+  "description": "Node server for making calls to people via the button",
+  "main": "src",
+  "scripts": {
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Cyberkruz/button-server.git"
+  },
+  "keywords": [
+    "node",
+    "button"
+  ],
+  "author": "Cyberkruz",
+  "bugs": {
+    "url": "https://github.com/Cyberkruz/button-server/issues"
+  },
+  "homepage": "https://github.com/Cyberkruz/button-server#readme"
+}
